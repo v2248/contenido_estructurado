@@ -23,27 +23,26 @@ CSS
 
 Quiero construir un documento digital sobre:
 
-**[TEMA]**
+Los carteles de las películas dirigidas por Yorgos Lanthimos
 
 Necesito organizar información sobre:
 
-**[TIPO DE CONTENIDO O COLECCIÓN]**
+Una colección de carteles oficiales y alternativos de sus películas, identificando la película a la que pertenecen y sus principales características visuales.
 
 Antes de generar HTML, investiga y estructura la información.
 
 ## Objetivo
 
-Construye un documento de información estructurada que pueda utilizarse
-posteriormente para generar una página web.
+Construye un documento de información estructurada que pueda utilizarse posteriormente para generar una página web y permita comparar y categorizar los carteles de las películas de Yorgos Lanthimos.
 
 ## Estructura
 
-Cada elemento debe incluir los siguientes campos:
+Cada cartel debe incluir exactamente los siguientes campos:
 
-- [CAMPO 1]
-- [CAMPO 2]
-- [CAMPO 3]
-- [CAMPO 4]
+- Película
+- Año de estreno
+- País o mercado del cartel
+- Características visuales
 - [CAMPO 5]
 
 Todos los elementos deben mantener exactamente la misma estructura.
