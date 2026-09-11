@@ -1,136 +1,698 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <!--
-    HEAD
-    Contiene información sobre el documento.
-    Aquí podemos definir metadata, título, favicon y archivos externos.
-  -->
-
-  <meta charset="UTF-8">
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-  <meta
-    name="description"
-    content="Documento base para estudiar estructura HTML, semántica y cajas."
-  >
-  <title>HTML, estructura y cajas</title>
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico">
-  <!-- Hoja de estilos externa -->
-  <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-
-  <!--
-    HEADER
-    Contenido introductorio del documento.
-  -->
-  <header>
-
-    <h1>HTML, estructura y cajas</h1>
-
-    <p>
-      Los elementos HTML generan cajas, pero cada elemento tiene una función dentro del documento.
-    </p>
-
-    <!--
-      NAV
-      Contiene enlaces principales de navegación.
-    -->
-    <nav>
-      <a href="#elementos">Elementos</a>
-      <a href="#estructura">Estructura</a>
-      <a href="#jerarquia">Jerarquía</a>
-    </nav>
-
-  </header>
-
-  <!--
-    MAIN
-    Contiene el contenido principal del documento.
-  -->
-  <main>
-
-    <!--
-      SECTION
-      Agrupa contenido relacionado por un mismo tema.
-    -->
-    <section id="elementos">
-
-      <h2>Los elementos HTML son cajas</h2>
-
-      <p>
-        Cada elemento ocupa un espacio dentro del documento.
-        El navegador calcula su tamaño, posición y relación con otros elementos.
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Colección de carteles de las películas dirigidas por Yorgos Lanthimos, organizada por año de estreno."
+    />
+    <title>Yorgos Lanthimos — Carteles</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <p class="eyebrow">Colección de carteles</p>
+      <h1>Yorgos Lanthimos</h1>
+      <p class="intro-text">
+        Filmografía organizada por año de estreno con carteles oficiales, alternativos y
+        materiales de distribución relacionados con la obra del director griego.
       </p>
 
-      <!--
-        ARTICLE
-        Representa una unidad de contenido dentro de esta sección.
-      -->
-      <article>
+      <nav aria-label="Navegación por años">
+        <ul class="year-nav">
+          <li><a href="#2005">2005</a></li>
+          <li><a href="#2009">2009</a></li>
+          <li><a href="#2011">2011</a></li>
+          <li><a href="#2015">2015</a></li>
+          <li><a href="#2017">2017</a></li>
+          <li><a href="#2018">2018</a></li>
+          <li><a href="#2023">2023</a></li>
+          <li><a href="#2024">2024</a></li>
+          <li><a href="#2025">2025</a></li>
+        </ul>
+      </nav>
+    </header>
 
-        <h3>No todas las cajas son iguales</h3>
-
+    <main id="contenido">
+      <section class="collection-intro" aria-labelledby="collection-title">
+        <h2 id="collection-title">Carteles de la filmografía</h2>
         <p>
-          Un título, un párrafo y un enlace generan cajas,
-          pero tienen funciones diferentes.
+          La información que sigue se organiza cronológicamente. Cada entrada conserva la
+          película, la edición del cartel, la referencia de mercado, la identidad visual y
+          la fuente citada en la documentación del proyecto.
         </p>
+      </section>
 
-        <a href="#">Esto es un enlace</a>
+      <section id="2005" class="year-section" aria-labelledby="2005-title">
+        <h2 id="2005-title">2005</h2>
+        <div class="poster-grid">
+          <article class="poster-card">
+            <figure class="poster-figure">
+              <img
+                class="poster-image"
+                src="./img/01_Kinetta_KinoLorber.png"
+                alt="Cartel de Kinetta de Yorgos Lanthimos"
+              />
+            </figure>
+            <div class="poster-copy">
+              <p class="film-kicker">Kinetta</p>
+              <h3>Cartel de distribución de Kino Lorber</h3>
+              <dl class="poster-details">
+                <div>
+                  <dt>Año</dt>
+                  <dd>2005</dd>
+                </div>
+                <div>
+                  <dt>País / mercado</dt>
+                  <dd>Estados Unidos — material de distribución de Kino Lorber para el estreno estadounidense posterior de la película.</dd>
+                </div>
+                <div>
+                  <dt>Estudio / distribuidor</dt>
+                  <dd>Kino Lorber</dd>
+                </div>
+                <div>
+                  <dt>Tipografía</dt>
+                  <dd>Sans serif / display</dd>
+                </div>
+                <div>
+                  <dt>Características visuales</dt>
+                  <dd>Color dominante: amarillo ocre, blanco y negro. Tipo de imagen: fotografía / collage. Composición: asimétrica, modular y minimalista. Presencia humana: grupo, distribuido en fotografías separadas. Recursos visuales principales: repetición, recorte, retícula modular, tratamiento monocromático/duotono y esquinas redondeadas.</dd>
+                </div>
+                <div>
+                  <dt>Fuente</dt>
+                  <dd>Kino Lorber — Kinetta (página oficial con “Hi-Res Poster”)</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+        </div>
+      </section>
 
-      </article>
+      <section id="2009" class="year-section" aria-labelledby="2009-title">
+        <h2 id="2009-title">2009</h2>
+        <div class="poster-grid">
+          <article class="poster-card">
+            <figure class="poster-figure">
+              <img
+                class="poster-image"
+                src="./img/02_Dogtooth_Greek_Abstract.png"
+                alt="Cartel griego abstracto de Dogtooth"
+              />
+            </figure>
+            <div class="poster-copy">
+              <p class="film-kicker">Dogtooth</p>
+              <h3>Cartel griego B1</h3>
+              <dl class="poster-details">
+                <div>
+                  <dt>Año</dt>
+                  <dd>2009</dd>
+                </div>
+                <div>
+                  <dt>País / mercado</dt>
+                  <dd>Grecia — cartel B1 griego. Dazed confirma que esta propuesta se publicó en Grecia y fue realizada para Cannes.</dd>
+                </div>
+                <div>
+                  <dt>Estudio / distribuidor</dt>
+                  <dd>Cartel griego de distribución / campaña de Cannes</dd>
+                </div>
+                <div>
+                  <dt>Tipografía</dt>
+                  <dd>Sans serif</dd>
+                </div>
+                <div>
+                  <dt>Características visuales</dt>
+                  <dd>Color dominante: crema, azul, rojo y amarillo. Tipo de imagen: gráfica abstracta. Composición: centrada y minimalista. Presencia humana: sin personas. Recursos visuales principales: abstracción, líneas curvas, repetición, distorsión gráfica y amplio espacio negativo.</dd>
+                </div>
+                <div>
+                  <dt>Fuente</dt>
+                  <dd>Posteritati — Dogtooth, original Greek B1; Dazed — entrevista con Vasilis Marmatakis</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
 
-    </section>
+          <article class="poster-card">
+            <figure class="poster-figure">
+              <img
+                class="poster-image"
+                src="./img/03_Dogtooth_Pool_Variant.png"
+                alt="Cartel British Quad de Dogtooth"
+              />
+            </figure>
+            <div class="poster-copy">
+              <p class="film-kicker">Dogtooth</p>
+              <h3>British Quad</h3>
+              <dl class="poster-details">
+                <div>
+                  <dt>Año</dt>
+                  <dd>2009</dd>
+                </div>
+                <div>
+                  <dt>País / mercado</dt>
+                  <dd>Reino Unido — British Quad (30 × 40 in).</dd>
+                </div>
+                <div>
+                  <dt>Estudio / distribuidor</dt>
+                  <dd>Cartel original británico</dd>
+                </div>
+                <div>
+                  <dt>Tipografía</dt>
+                  <dd>Sans serif / display condensada</dd>
+                </div>
+                <div>
+                  <dt>Características visuales</dt>
+                  <dd>Color dominante: turquesa, naranja y negro. Tipo de imagen: fotografía. Composición: asimétrica y saturada. Presencia humana: figura parcial. Recursos visuales principales: recorte fotográfico, bloques de color, contraste cromático, título a gran escala y jerarquía tipográfica fuerte.</dd>
+                </div>
+                <div>
+                  <dt>Fuente</dt>
+                  <dd>Posteritati — Dogtooth, original British Quad</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+        </div>
+      </section>
 
-    <section id="estructura">
+      <section id="2011" class="year-section" aria-labelledby="2011-title">
+        <h2 id="2011-title">2011</h2>
+        <div class="poster-grid">
+          <article class="poster-card">
+            <figure class="poster-figure">
+              <img
+                class="poster-image"
+                src="./img/04_Alps_US_OneSheet.png"
+                alt="Cartel de Alps"
+              />
+            </figure>
+            <div class="poster-copy">
+              <p class="film-kicker">Alps</p>
+              <h3>U.S. One Sheet</h3>
+              <dl class="poster-details">
+                <div>
+                  <dt>Año</dt>
+                  <dd>2011</dd>
+                </div>
+                <div>
+                  <dt>País / mercado</dt>
+                  <dd>Estados Unidos — U.S. One Sheet (27 × 40 in).</dd>
+                </div>
+                <div>
+                  <dt>Estudio / distribuidor</dt>
+                  <dd>Cartel de distribución estadounidense</dd>
+                </div>
+                <div>
+                  <dt>Tipografía</dt>
+                  <dd>Sans serif / display</dd>
+                </div>
+                <div>
+                  <dt>Características visuales</dt>
+                  <dd>Color dominante: gris, negro y blanco. Tipo de imagen: fotografía / collage. Composición: centrada, vertical y minimalista. Presencia humana: grupo. Recursos visuales principales: superposición, recorte, alteración de escala, apilamiento vertical de figuras y monocromía.</dd>
+                </div>
+                <div>
+                  <dt>Fuente</dt>
+                  <dd>Posteritati — Alps, original U.S. One Sheet; Dazed — Marmatakis explica el cartel oficial de Alps</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+        </div>
+      </section>
 
-      <h2>Las cajas forman estructuras</h2>
+      <section id="2015" class="year-section" aria-labelledby="2015-title">
+        <h2 id="2015-title">2015</h2>
+        <div class="poster-grid">
+          <article class="poster-card">
+            <figure class="poster-figure">
+              <img
+                class="poster-image"
+                src="./img/05_The_Lobster_Minimal_Poster.png"
+                alt="Cartel oficial de The Lobster"
+              />
+            </figure>
+            <div class="poster-copy">
+              <p class="film-kicker">The Lobster</p>
+              <h3>Cartel oficial</h3>
+              <dl class="poster-details">
+                <div>
+                  <dt>Año</dt>
+                  <dd>2015</dd>
+                </div>
+                <div>
+                  <dt>País / mercado</dt>
+                  <dd>Reino Unido e Irlanda — campaña de Picturehouse Entertainment y Element Distribution.</dd>
+                </div>
+                <div>
+                  <dt>Estudio / distribuidor</dt>
+                  <dd>Picturehouse Entertainment / Element Distribution</dd>
+                </div>
+                <div>
+                  <dt>Tipografía</dt>
+                  <dd>Sans serif — Avenir Next</dd>
+                </div>
+                <div>
+                  <dt>Características visuales</dt>
+                  <dd>Color dominante: crema / blanco roto, negro y escala de grises. Tipo de imagen: fotografía / collage. Composición: centrada y minimalista. Presencia humana: figura parcial. Recursos visuales principales: espacio negativo, recorte, fragmentación corporal, silueta ausente y contraste entre figura y vacío.</dd>
+                </div>
+                <div>
+                  <dt>Fuente</dt>
+                  <dd>Fonts In Use — The Lobster movie posters; RTÉ — distribución conjunta en Reino Unido e Irlanda</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+        </div>
+      </section>
 
-      <p>
-        Una caja puede contener otras cajas.
-        Las etiquetas HTML describen cómo se relaciona cada parte del contenido.
-      </p>
+      <section id="2017" class="year-section" aria-labelledby="2017-title">
+        <h2 id="2017-title">2017</h2>
+        <div class="poster-grid">
+          <article class="poster-card">
+            <figure class="poster-figure">
+              <img
+                class="poster-image"
+                src="./img/08_The_Killing_of_a_Sacred_Deer_Hospital.png"
+                alt="Cartel del hospital de The Killing of a Sacred Deer"
+              />
+            </figure>
+            <div class="poster-copy">
+              <p class="film-kicker">The Killing of a Sacred Deer</p>
+              <h3>U.S. One Sheet del hospital</h3>
+              <dl class="poster-details">
+                <div>
+                  <dt>Año</dt>
+                  <dd>2017</dd>
+                </div>
+                <div>
+                  <dt>País / mercado</dt>
+                  <dd>Estados Unidos — U.S. One Sheet (27 × 40 in).</dd>
+                </div>
+                <div>
+                  <dt>Estudio / distribuidor</dt>
+                  <dd>Cartel oficial de distribución estadounidense</dd>
+                </div>
+                <div>
+                  <dt>Tipografía</dt>
+                  <dd>Serif + sans serif — Type Network identifica Times y Gotham</dd>
+                </div>
+                <div>
+                  <dt>Características visuales</dt>
+                  <dd>Color dominante: blanco, gris y negro. Tipo de imagen: fotografía / collage. Composición: centrada, casi simétrica y minimalista. Presencia humana: cuerpo completo. Recursos visuales principales: distorsión vertical, perspectiva extrema, alteración de escala, espacio negativo y estiramiento de la arquitectura hospitalaria.</dd>
+                </div>
+                <div>
+                  <dt>Fuente</dt>
+                  <dd>Posteritati — The Killing of a Sacred Deer, U.S. One Sheet; Type Network — ScreenFonts: November 2017</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
 
-      <article>
+          <article class="poster-card">
+            <figure class="poster-figure">
+              <img
+                class="poster-image"
+                src="./img/09_The_Killing_of_a_Sacred_Deer_Style_B.png"
+                alt="Cartel Style B de The Killing of a Sacred Deer"
+              />
+            </figure>
+            <div class="poster-copy">
+              <p class="film-kicker">The Killing of a Sacred Deer</p>
+              <h3>U.S. One Sheet, Style B</h3>
+              <dl class="poster-details">
+                <div>
+                  <dt>Año</dt>
+                  <dd>2017</dd>
+                </div>
+                <div>
+                  <dt>País / mercado</dt>
+                  <dd>Estados Unidos — U.S. One Sheet, Style B (27 × 41 in).</dd>
+                </div>
+                <div>
+                  <dt>Estudio / distribuidor</dt>
+                  <dd>Cartel alternativo de campaña</dd>
+                </div>
+                <div>
+                  <dt>Tipografía</dt>
+                  <dd>Serif + sans serif</dd>
+                </div>
+                <div>
+                  <dt>Características visuales</dt>
+                  <dd>Color dominante: gris pálido, negro y tonos piel. Tipo de imagen: fotografía / collage. Composición: centrada y minimalista. Presencia humana: grupo — rostros y figuras parciales. Recursos visuales principales: inversión, superposición, recorte, fragmentación de rostros y orientación boca abajo.</dd>
+                </div>
+                <div>
+                  <dt>Fuente</dt>
+                  <dd>Posteritati — The Killing of a Sacred Deer, Style B; Dazed — Marmatakis explica la segunda pieza oficial</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+        </div>
+      </section>
 
-        <h3>Una estructura contiene más estructuras</h3>
+      <section id="2018" class="year-section" aria-labelledby="2018-title">
+        <h2 id="2018-title">2018</h2>
+        <div class="poster-grid">
+          <article class="poster-card">
+            <figure class="poster-figure">
+              <img
+                class="poster-image"
+                src="./img/06_The_Favourite_UK_Black.png"
+                alt="Cartel principal británico de The Favourite"
+              />
+            </figure>
+            <div class="poster-copy">
+              <p class="film-kicker">The Favourite</p>
+              <h3>Cartel principal del Reino Unido</h3>
+              <dl class="poster-details">
+                <div>
+                  <dt>Año</dt>
+                  <dd>2018</dd>
+                </div>
+                <div>
+                  <dt>País / mercado</dt>
+                  <dd>Reino Unido — cartel principal británico.</dd>
+                </div>
+                <div>
+                  <dt>Estudio / distribuidor</dt>
+                  <dd>Campaña del Reino Unido</dd>
+                </div>
+                <div>
+                  <dt>Tipografía</dt>
+                  <dd>Serif / display — la campaña utiliza Village en el key art de Marmatakis</dd>
+                </div>
+                <div>
+                  <dt>Características visuales</dt>
+                  <dd>Color dominante: negro, tonos piel, blanco / crema y dorado. Tipo de imagen: fotografía / collage. Composición: asimétrica y minimalista. Presencia humana: grupo. Recursos visuales principales: alteración extrema de escala, rotación, superposición, recorte, miniaturización de figuras y amplio espacio negativo.</dd>
+                </div>
+                <div>
+                  <dt>Fuente</dt>
+                  <dd>Dazed — The Favourite, “the main one in the UK”; Fonts In Use — The Favourite movie poster</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
 
-        <p>
-          Este artículo está dentro de una sección y contiene
-          a su vez un título y un párrafo.
-        </p>
+          <article class="poster-card">
+            <figure class="poster-figure">
+              <img
+                class="poster-image"
+                src="./img/07_The_Favourite_US_OneSheet.png"
+                alt="Cartel U.S. One Sheet de The Favourite"
+              />
+            </figure>
+            <div class="poster-copy">
+              <p class="film-kicker">The Favourite</p>
+              <h3>U.S. One Sheet</h3>
+              <dl class="poster-details">
+                <div>
+                  <dt>Año</dt>
+                  <dd>2018</dd>
+                </div>
+                <div>
+                  <dt>País / mercado</dt>
+                  <dd>Estados Unidos — U.S. One Sheet (27 × 40 in); Posteritati lo describe además como “international one sheet”.</dd>
+                </div>
+                <div>
+                  <dt>Estudio / distribuidor</dt>
+                  <dd>Cartel internacional estadounidense</dd>
+                </div>
+                <div>
+                  <dt>Tipografía</dt>
+                  <dd>Serif / display</dd>
+                </div>
+                <div>
+                  <dt>Características visuales</dt>
+                  <dd>Color dominante: crema, negro, dorado y tonos piel. Tipo de imagen: fotografía / collage. Composición: asimétrica y minimalista. Presencia humana: grupo. Recursos visuales principales: marco rectangular, superposición, recorte, alteración de escala, espacio negativo y presencia de conejos como motivo visual.</dd>
+                </div>
+                <div>
+                  <dt>Fuente</dt>
+                  <dd>Posteritati — The Favourite, original U.S. One Sheet</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+        </div>
+      </section>
 
-      </article>
+      <section id="2023" class="year-section" aria-labelledby="2023-title">
+        <h2 id="2023-title">2023</h2>
+        <div class="poster-grid">
+          <article class="poster-card">
+            <figure class="poster-figure">
+              <img
+                class="poster-image"
+                src="./img/10_Poor_Things_Poster_1.png"
+                alt="Cartel francés de Poor Things"
+              />
+            </figure>
+            <div class="poster-copy">
+              <p class="film-kicker">Poor Things</p>
+              <h3>French Petite</h3>
+              <dl class="poster-details">
+                <div>
+                  <dt>Año</dt>
+                  <dd>2023</dd>
+                </div>
+                <div>
+                  <dt>País / mercado</dt>
+                  <dd>Francia — French Petite (16 × 24 in).</dd>
+                </div>
+                <div>
+                  <dt>Estudio / distribuidor</dt>
+                  <dd>Cartel francés</dd>
+                </div>
+                <div>
+                  <dt>Tipografía</dt>
+                  <dd>Display</dd>
+                </div>
+                <div>
+                  <dt>Características visuales</dt>
+                  <dd>Color dominante: negro, tonos piel, azul / morado y rojo. Tipo de imagen: fotografía / collage. Composición: centrada y minimalista. Presencia humana: rostro. Recursos visuales principales: primerísimo primer plano, recorte, maquillaje corrido, textura y fuerte contraste cromático.</dd>
+                </div>
+                <div>
+                  <dt>Fuente</dt>
+                  <dd>Posteritati — Poor Things, original French Petite</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
 
-    </section>
+          <article class="poster-card">
+            <figure class="poster-figure">
+              <img
+                class="poster-image"
+                src="./img/11_Poor_Things_Poster_2.png"
+                alt="Cartel japonés de Poor Things"
+              />
+            </figure>
+            <div class="poster-copy">
+              <p class="film-kicker">Poor Things</p>
+              <h3>Japanese B5 Chirashi</h3>
+              <dl class="poster-details">
+                <div>
+                  <dt>Año</dt>
+                  <dd>2023</dd>
+                </div>
+                <div>
+                  <dt>País / mercado</dt>
+                  <dd>Japón — J B5 Chirashi (7 × 10 in), dos caras.</dd>
+                </div>
+                <div>
+                  <dt>Estudio / distribuidor</dt>
+                  <dd>Searchlight Pictures Japan</dd>
+                </div>
+                <div>
+                  <dt>Tipografía</dt>
+                  <dd>Display</dd>
+                </div>
+                <div>
+                  <dt>Características visuales</dt>
+                  <dd>Color dominante: azul claro, blanco, crema y tonos piel. Tipo de imagen: fotografía / collage. Composición: centrada y simétrica. Presencia humana: figura parcial. Recursos visuales principales: superposición, recorte, integración anatómica y arquitectónica, alteración de escala y pequeñas figuras incorporadas al cuerpo/vestuario.</dd>
+                </div>
+                <div>
+                  <dt>Fuente</dt>
+                  <dd>Posteritati — Poor Things, original Japanese B5 Chirashi; Searchlight Pictures Japan — visual oficial japonés</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
 
-    <section id="jerarquia">
+          <article class="poster-card">
+            <figure class="poster-figure">
+              <img
+                class="poster-image"
+                src="./img/12_Poor_Things_Poster_3.png"
+                alt="Cartel promocional de Poor Things"
+              />
+            </figure>
+            <div class="poster-copy">
+              <p class="film-kicker">Poor Things</p>
+              <h3>Versión de campaña</h3>
+              <dl class="poster-details">
+                <div>
+                  <dt>Año</dt>
+                  <dd>2023</dd>
+                </div>
+                <div>
+                  <dt>País / mercado</dt>
+                  <dd>Material promocional de campaña / mercado internacional.</dd>
+                </div>
+                <div>
+                  <dt>Estudio / distribuidor</dt>
+                  <dd>Campaña promocional</dd>
+                </div>
+                <div>
+                  <dt>Tipografía</dt>
+                  <dd>Display</dd>
+                </div>
+                <div>
+                  <dt>Características visuales</dt>
+                  <dd>La documentación del proyecto incluye esta pieza como parte de la colección de carteles de Poor Things y su composición se integra dentro del mismo sistema visual de la campaña.</dd>
+                </div>
+                <div>
+                  <dt>Fuente</dt>
+                  <dd>Archivo del proyecto / material de la campaña de Poor Things</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+        </div>
+      </section>
 
-      <h2>Las etiquetas crean jerarquía</h2>
+      <section id="2024" class="year-section" aria-labelledby="2024-title">
+        <h2 id="2024-title">2024</h2>
+        <div class="poster-grid">
+          <article class="poster-card">
+            <figure class="poster-figure">
+              <img
+                class="poster-image"
+                src="./img/13_Kinds_of_Kindness_Collage.png"
+                alt="Cartel U.S. One Sheet de Kinds of Kindness"
+              />
+            </figure>
+            <div class="poster-copy">
+              <p class="film-kicker">Kinds of Kindness</p>
+              <h3>U.S. One Sheet</h3>
+              <dl class="poster-details">
+                <div>
+                  <dt>Año</dt>
+                  <dd>2024</dd>
+                </div>
+                <div>
+                  <dt>País / mercado</dt>
+                  <dd>Estados Unidos — U.S. One Sheet (27 × 40 in).</dd>
+                </div>
+                <div>
+                  <dt>Estudio / distribuidor</dt>
+                  <dd>Cartel original estadounidense</dd>
+                </div>
+                <div>
+                  <dt>Tipografía</dt>
+                  <dd>Display</dd>
+                </div>
+                <div>
+                  <dt>Características visuales</dt>
+                  <dd>Color dominante: negro, azul, verde, amarillo y rojo. Tipo de imagen: fotografía / collage. Composición: centrada, geométrica y asimétrica. Presencia humana: figura parcial — manos. Recursos visuales principales: superposición, recorte, divisiones geométricas, objetos aislados, alteración de escala y fragmentación corporal.</dd>
+                </div>
+                <div>
+                  <dt>Fuente</dt>
+                  <dd>Posteritati — Kinds of Kindness, original U.S. One Sheet</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
 
-      <p>
-        Un h1 representa el título principal.
-        Un h2 identifica una sección.
-        Un h3 introduce un nivel secundario.
-      </p>
+          <article class="poster-card">
+            <figure class="poster-figure">
+              <img
+                class="poster-image"
+                src="./img/14_Kinds_of_Kindness_Emma.png"
+                alt="Cartel alternativo de Kinds of Kindness"
+              />
+            </figure>
+            <div class="poster-copy">
+              <p class="film-kicker">Kinds of Kindness</p>
+              <h3>Versión alternativa</h3>
+              <dl class="poster-details">
+                <div>
+                  <dt>Año</dt>
+                  <dd>2024</dd>
+                </div>
+                <div>
+                  <dt>País / mercado</dt>
+                  <dd>Material alternativo de campaña.</dd>
+                </div>
+                <div>
+                  <dt>Estudio / distribuidor</dt>
+                  <dd>Campaña promocional</dd>
+                </div>
+                <div>
+                  <dt>Tipografía</dt>
+                  <dd>Display</dd>
+                </div>
+                <div>
+                  <dt>Características visuales</dt>
+                  <dd>La pieza documentada se conecta con el mismo sistema visual de la campaña y mantiene la lógica de recorte, superposición y fragmentación corporal del cartel principal.</dd>
+                </div>
+                <div>
+                  <dt>Fuente</dt>
+                  <dd>Archivo del proyecto / material promocional de Kinds of Kindness</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+        </div>
+      </section>
 
-    </section>
+      <section id="2025" class="year-section" aria-labelledby="2025-title">
+        <h2 id="2025-title">2025</h2>
+        <div class="poster-grid">
+          <article class="poster-card">
+            <figure class="poster-figure">
+              <img
+                class="poster-image"
+                src="./img/15_Bugonia_Official.png"
+                alt="Cartel oficial de Bugonia"
+              />
+            </figure>
+            <div class="poster-copy">
+              <p class="film-kicker">Bugonia</p>
+              <h3>U.S. One Sheet</h3>
+              <dl class="poster-details">
+                <div>
+                  <dt>Año</dt>
+                  <dd>2025</dd>
+                </div>
+                <div>
+                  <dt>País / mercado</dt>
+                  <dd>Estados Unidos — U.S. One Sheet (27 × 41 in).</dd>
+                </div>
+                <div>
+                  <dt>Estudio / distribuidor</dt>
+                  <dd>Cartel oficial estadounidense</dd>
+                </div>
+                <div>
+                  <dt>Tipografía</dt>
+                  <dd>Display geométrica</dd>
+                </div>
+                <div>
+                  <dt>Características visuales</dt>
+                  <dd>Color dominante: rojo, amarillo / miel, beige y negro. Tipo de imagen: fotografía / collage. Composición: centrada y saturada. Presencia humana: rostro. Recursos visuales principales: rotación, superposición, textura líquida, recorte, distorsión y capas translúcidas sobre el rostro.</dd>
+                </div>
+                <div>
+                  <dt>Fuente</dt>
+                  <dd>Posteritati — Bugonia, original U.S. One Sheet; IMP Awards — Bugonia poster #1</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
 
-  </main>
-
-  <!--
-    FOOTER
-    Contiene información de cierre o complementaria.
-  -->
-  <footer>
-
-    <p>Guía de estudio · HTML + CSS</p>
-
-  </footer>
-
-</body>
+    <footer class="page-footer">
+      <p>Yorgos Lanthimos · colección de carteles</p>
+    </footer>
+  </body>
 </html>

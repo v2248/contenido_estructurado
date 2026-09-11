@@ -18,6 +18,13 @@
   --font-size-h1: 3rem;
   --font-size-h2: 2rem;
   --font-size-h3: 1.25rem;
+
+  --paper: #f3f1ed;
+  --paper-strong: #e9e4dc;
+  --ink: #111111;
+  --muted: #5a5a5a;
+  --line: #d9d1c6;
+  --panel: #faf9f7;
 }
 
 /*
@@ -53,6 +60,10 @@ body {
 
   font-family: var(--font-family-base);
   font-size: var(--font-size-body);
+
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.6;
 }
 
 /*
@@ -65,7 +76,12 @@ body {
 */
 
 h1 {
-  font-size: var(--font-size-h1);
+  margin: 0;
+  font-size: clamp(2.6rem, 5vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 h2 {
@@ -86,7 +102,13 @@ h3 {
 */
 
 a {
-  color: var(--color-accent);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
 }
 
 
