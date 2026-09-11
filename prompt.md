@@ -43,7 +43,16 @@ Cada cartel debe incluir exactamente los siguientes campos:
 - Año de estreno
 - País o mercado del cartel
 - Características visuales
-- [CAMPO 5]
+- Fuente
+
+  Dentro de **Características visuales**, utiliza siempre las mismas categorías:
+
+Color dominante
+Tipo de imagen: fotografía, ilustración, collage, tipográfico u otro
+Composición: centrada, simétrica, asimétrica, minimalista, saturada u otra
+Presencia humana: rostro, cuerpo completo, grupo, figura parcial o sin personas
+Tipografía: serif, sans serif, display, manuscrita u otra
+Recursos visuales principales: recorte, repetición, distorsión, superposición, textura, reflejo, negativo u otros
 
 Todos los elementos deben mantener exactamente la misma estructura.
 
