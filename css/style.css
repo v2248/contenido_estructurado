@@ -8,8 +8,16 @@
 */
 
 :root {
-  --color-background: #f4f4f0;
-  --color-text: #171717;
+
+  --paper: #f3f1ed;
+  --paper-strong: #e9e4dc;
+  --ink: #111111;
+  --muted: #5a5a5a;
+  --line: #d9d1c6;
+  --panel: #faf9f7;
+
+  --color-background: var(--ink);
+  --color-text: #E8E1D5;
   --color-accent: #5b3df5;
 
   --font-family-base: system-ui, Arial, Helvetica, sans-serif;
@@ -19,12 +27,6 @@
   --font-size-h2: 2rem;
   --font-size-h3: 1.25rem;
 
-  --paper: #f3f1ed;
-  --paper-strong: #e9e4dc;
-  --ink: #111111;
-  --muted: #5a5a5a;
-  --line: #d9d1c6;
-  --panel: #faf9f7;
 }
 
 /*
@@ -37,11 +39,6 @@
 
 * {
   box-sizing: border-box;
-  /*
-    Regla temporal para visualizar las cajas.
-    Puede eliminarse cuando ya no sea necesaria.
-  */
-  outline: 1px solid;
 }
 
 
@@ -61,8 +58,6 @@ body {
   font-family: var(--font-family-base);
   font-size: var(--font-size-body);
 
-  background: var(--paper);
-  color: var(--ink);
   line-height: 1.6;
 }
 
@@ -102,7 +97,7 @@ h3 {
 */
 
 a {
-  color: var(--ink);
+  color: var(--color-accent);
   text-decoration: none;
 }
 
