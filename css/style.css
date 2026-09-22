@@ -9,6 +9,14 @@
 
 @import url("https://fonts.cdnfonts.com/css/druk-wide-bold");
 
+@font-face {
+  font-family: "Fold Grotesque";
+  src: url("../fonts/Fold-Grotesque-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
 
   --paper: #f3f1ed;
@@ -24,7 +32,7 @@
 
   --page-margin: clamp(20px, 3.75vw, 60px);
 
-  --font-family-base: system-ui, Arial, Helvetica, sans-serif;
+  --font-family-base: "Fold Grotesque", sans-serif;
   --font-family-title: "Druk Wide Bold", sans-serif;
 
   --font-size-body: 1rem;
