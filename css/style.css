@@ -226,6 +226,7 @@ main {
   min-width: 0;
   max-width: none;
   margin: 0 auto;
+  padding-top: 45px;
 }
 
 
@@ -268,9 +269,7 @@ section {
 
 .chron-list li {
   margin: 0 0 0.6rem 0;
-  display: flex;
-  align-items: baseline;
-  gap: 0.6rem;
+  display: block;
 }
 
 .chron-list .year {
@@ -298,8 +297,35 @@ section {
 .collection-intro .chron-list a:hover .year {
   color: var(--color-text);
 }
+.collection-intro .chron-list a:hover .film-name,
 .collection-intro .chron-list a:hover .movie {
   color: var(--color-accent);
+}
+
+.chron-list .film-index-link {
+  display: grid;
+  grid-template-columns: 150px 24px minmax(0, 1fr);
+  column-gap: 8px;
+  align-items: baseline;
+  width: fit-content;
+}
+
+.chron-list .film-index-link .year,
+.chron-list .film-index-link .dash,
+.chron-list .film-index-link .film-name {
+  display: block;
+}
+
+.chron-list .film-index-link .dash {
+  color: var(--color-text);
+}
+
+.chron-list .film-index-link .film-name {
+  color: var(--color-text);
+}
+
+.chron-list .film-index-link .year {
+  justify-self: start;
 }
 
 .right-col h2#collection-title {
@@ -325,6 +351,73 @@ section {
   width: 100%;
   margin-left: 0;
   margin-right: 0;
+  padding-top: 0.5rem;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 42px;
+  color: var(--color-accent);
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+  line-height: 1;
+}
+
+.back-link:hover,
+.back-link:focus {
+  text-decoration: none;
+}
+
+.back-link svg {
+  display: block;
+  width: 120px;
+  height: 42px;
+  color: inherit;
+}
+
+.back-link svg path {
+  fill: currentColor;
+}
+
+.year-section .film-heading-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  width: 100%;
+  align-items: end;
+  margin: 0 0 90px 0;
+}
+
+.year-section .film-header-year {
+  grid-column: 1 / 2;
+  justify-self: start;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-title);
+  color: var(--color-accent);
+  font-size: clamp(64px, 8vw, 140px);
+  line-height: 0.9;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+.year-section .film-header-title {
+  grid-column: 2 / 4;
+  justify-self: end;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-title);
+  color: var(--color-text);
+  font-size: clamp(42px, 5vw, 90px);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  text-align: right;
+  max-width: 100%;
+  word-break: break-word;
 }
 
 .poster-grid {
@@ -336,6 +429,7 @@ section {
   box-sizing: border-box;
   justify-items: stretch;
   align-items: start;
+  margin-top: 0;
 }
 
 /* Ensure the single film info block sits under the first poster column
@@ -394,4 +488,8 @@ h6 {
 
 nav a {
   margin-right: 1rem;
+}
+
+.poster-grid .poster-copy h3 {
+  color: #5b3df5;
 }
