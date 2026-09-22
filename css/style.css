@@ -169,6 +169,23 @@ h3 {
   font-size: var(--font-size-h3);
 }
 
+/* Large section years (e.g. 2005, 2009) — only inside .year-section */
+.year-section > h2 {
+  font-family: var(--font-family-title);
+  color: var(--color-accent);
+  font-size: clamp(64px, 8vw, 140px);
+  line-height: 0.9;
+  letter-spacing: 0;
+  display: block;
+  text-align: left;
+  box-sizing: border-box;
+  /* make the heading span the content area so its left edge aligns with poster grid */
+  width: 100%;
+  max-width: none;
+  margin: 0 0 28px 0;
+  padding: 0;
+}
+
 
 /*
   ============================================================
@@ -230,6 +247,74 @@ section {
   margin-bottom: 3rem;
 }
 
+/* Two-column intro immediately below hero */
+.section-intro {
+  margin-top: 120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10vw;
+  align-items: start;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+.chron-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.chron-list li {
+  margin: 0 0 0.6rem 0;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.chron-list .year {
+  font-family: var(--font-family-title);
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+
+.chron-list .hyphen {
+  color: var(--color-text);
+}
+
+.chron-list .movie {
+  font-family: var(--font-family-base);
+  color: var(--color-text);
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+/* Homepage-only: when hovering the full clickable index row, swap colors
+   between the year and the movie title. Scoped to .collection-intro so
+   other links remain unaffected. */
+.collection-intro .chron-list a:hover .year {
+  color: var(--color-text);
+}
+.collection-intro .chron-list a:hover .movie {
+  color: var(--color-accent);
+}
+
+.right-col h2#collection-title {
+  font-family: var(--font-family-title);
+  color: var(--color-accent);
+  margin: 0 0 0.75rem 0;
+  text-align: left;
+}
+
+.right-col p {
+  margin: 0;
+  max-width: 560px;
+  text-align: left;
+}
+
 /*
   ============================================================
   POSTER GALLERY LAYOUT
@@ -251,6 +336,15 @@ section {
   box-sizing: border-box;
   justify-items: stretch;
   align-items: start;
+}
+
+/* Ensure the single film info block sits under the first poster column
+   and matches its width. Scoped to .poster-grid so it follows the grid. */
+.poster-grid .poster-copy {
+  grid-column: 1 / 2;
+  width: 100%;
+  max-width: 100%;
+  justify-self: stretch;
 }
 
 .poster-card {
