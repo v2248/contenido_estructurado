@@ -54,14 +54,13 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
-/*
-  ============================================================
-  BODY
-  ============================================================
-
-  Define el sistema visual base del documento.
-*/
 body {
   margin: 0;
 
@@ -457,7 +456,8 @@ section {
 
 .poster-figure {
   width: 100%;
-  height: calc(100vh - 56px);
+  aspect-ratio: 6 / 9;
+  height: auto;
   margin: 0;
   overflow: hidden;
 }
@@ -500,4 +500,314 @@ nav a {
 
 .poster-grid .poster-copy h3 {
   color: #5b3df5;
+}
+
+/*
+  ============================================================
+  RESPONSIVE
+  ============================================================
+  Adaptación para tablet y móvil sin alterar el diseño desktop.
+*/
+
+@media (max-width: 1024px) {
+  :root {
+    --page-margin: 32px;
+  }
+
+  .section-intro {
+    display: block;
+    column-gap: 0;
+    padding-top: 1.5rem;
+  }
+
+  .chron-list .film-index-link {
+    grid-template-columns: 120px 20px minmax(0, 1fr);
+    width: 100%;
+  }
+
+  .right-col p {
+    max-width: 100%;
+  }
+}
+/*
+media query
+media queries
+*/
+@media screen and (max-width: 767px) {
+  :root {
+    --page-margin: 20px;
+  }
+
+  header,
+  main,
+  footer {
+    padding-left: var(--page-margin);
+    padding-right: var(--page-margin);
+  }
+
+  img,
+  svg,
+  video,
+  canvas,
+  embed,
+  object {
+    max-width: 100%;
+    height: auto;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  a,
+  li,
+  span {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .page-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+    padding-top: 2rem;
+  }
+
+  .hero-eyebrow,
+  .hero-title,
+  .hero-intro {
+    position: static;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+  }
+
+  .hero-eyebrow {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .page-header .eyebrow,
+  .page-header .intro-text {
+    font-size: inherit;
+  }
+
+  .hero-title {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    white-space: normal;
+    word-break: normal;
+    letter-spacing: -0.05em;
+    font-size: 10vw;
+    line-height: 0.9;
+    margin: 0 0 2.75rem 0;
+  }
+
+  .hero-title-line {
+    display: block;
+    white-space: nowrap;
+  }
+
+  .hero-title-line-bottom {
+    white-space: nowrap;
+  }
+
+  .hero-intro {
+    margin-top: 0;
+    max-width: 100%;
+  }
+
+  .collection-intro.section-intro {
+    display: block;
+    padding-top: 1.25rem;
+    margin-top: 0;
+  }
+
+  .left-col,
+  .right-col {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .chron-list {
+    width: 100%;
+  }
+
+  .chron-list li {
+    margin-bottom: 0.55rem;
+  }
+
+  .chron-list .film-index-link {
+    display: grid;
+    grid-template-columns: 82px 18px minmax(0, 1fr);
+    column-gap: 8px;
+    width: 100%;
+    max-width: 100%;
+    align-items: baseline;
+  }
+
+  .chron-list .film-index-link .year,
+  .chron-list .film-index-link .film-name,
+  .chron-list .film-index-link .dash {
+    min-width: 0;
+  }
+
+  .chron-list .film-index-link .film-name {
+    white-space: normal;
+    line-height: 1.1;
+  }
+
+  .chron-list .year {
+    font-size: 0.95rem;
+  }
+
+  .right-col h2#collection-title {
+    margin-top: 2rem;
+    font-size: clamp(1.55rem, 7vw, 2.4rem);
+    line-height: 1;
+  }
+
+  .right-col p {
+    max-width: 100%;
+    font-size: 0.96rem;
+    line-height: 1.6;
+  }
+
+  .year-section {
+    width: 100%;
+    padding-top: 0.25rem;
+  }
+
+  .year-section > h2,
+  .year-section .film-header-year {
+    font-size: clamp(2.8rem, 17vw, 5rem);
+    line-height: 0.9;
+    margin-bottom: 0.5rem;
+  }
+
+  .year-section .film-heading-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 100%;
+    margin: 0 0 32px 0;
+    align-items: start;
+  }
+
+  .year-section .film-header-year {
+    grid-column: 1;
+    justify-self: start;
+    text-align: left;
+    width: 100%;
+  }
+
+  .year-section .film-header-title {
+    grid-column: 1;
+    justify-self: start;
+    text-align: left;
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(1.7rem, 8vw, 3.2rem);
+    line-height: 0.94;
+    letter-spacing: -0.04em;
+    overflow-wrap: anywhere;
+  }
+
+  .poster-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 0;
+    width: 100%;
+  }
+
+  .poster-card,
+  .poster-copy {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .poster-grid .poster-copy {
+    grid-column: 1;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .poster-figure {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 3 / 4.5;
+    overflow: hidden;
+  }
+
+  .poster-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .back-link {
+    display: inline-flex;
+    width: 96px;
+    height: 34px;
+    margin-bottom: 1rem;
+  }
+
+  .back-link svg {
+    display: block;
+    width: 96px;
+    height: 34px;
+  }
+
+  .poster-copy {
+    margin-top: 0.25rem;
+  }
+
+  .poster-copy p,
+  .poster-copy strong,
+  .poster-copy h3,
+  .poster-copy .film-kicker {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .poster-copy p {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+  }
+
+  .poster-copy h3 {
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    line-height: 1.1;
+    margin: 0.8rem 0 0.4rem 0;
+  }
+
+  .poster-copy .film-kicker {
+    font-size: 0.9rem;
+    margin-bottom: 0.15rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero-title {
+    max-width: 7.5em;
+    margin-bottom: 2.5rem;
+  }
 }

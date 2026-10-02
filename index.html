@@ -25,12 +25,30 @@
       .chron-list .film-name {
         white-space: nowrap;
       }
+
+      @media (max-width: 767px) {
+        .chron-list a {
+          grid-template-columns: 82px 18px minmax(0, 1fr);
+          width: 100%;
+          max-width: 100%;
+        }
+
+        .chron-list .film-name {
+          white-space: normal;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .chron-list a {
+          grid-template-columns: 72px 14px minmax(0, 1fr);
+        }
+      }
     </style>
   </head>
   <body>
     <header class="page-header hero">
       <p class="eyebrow hero-eyebrow">colección de carteles</p>
-      <h1 class="hero-title">Yorgos Lanthimos</h1>
+      <h1 class="hero-title"><span class="hero-title-line hero-title-line-top">Yorgos</span> <span class="hero-title-line hero-title-line-bottom">Lanthimos</span></h1>
       <p class="intro-text hero-intro">
         Una exploración de la filmografía de Yorgos Lanthimos y del universo visual que la define. La extrañeza, la incomodidad y la distorsión de lo cotidiano atraviesan sus obras y construyen un lenguaje cinematográfico profundamente reconocible.
       </p>
